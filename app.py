@@ -35,14 +35,25 @@ c = curl
 # req
 req = requests.get('http://weburbanist.com')
 # using sh.curl
+# encoding is different
 # req = c.call('http://weburbanist.com')
 
+# write to git
+
+## write to git
+
+
+## write to file
 out = open(d+f,'w',encoding='utf-8')
 out.write(req.text)
 # out.flush()
 out.close()
 
-g.commit('-a','-m','auto')
+## commit
+	# todo: check repo status
+  # todo: functional to receive api hit
+
+# g.commit('-a','-m','auto')
 
 # GitPython
 # repo = Repo(d);
