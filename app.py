@@ -35,7 +35,7 @@ c = curl
 # req
 req = requests.get('http://weburbanist.com')
 # using sh.curl
-# req = c.('http://weburbanist.com')
+# req = c.call('http://weburbanist.com')
 
 out = open(d+f,'w',encoding='utf-8')
 out.write(req.text)
