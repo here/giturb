@@ -14,7 +14,8 @@ f = 'index.html'
 repopath = d
 
 # git, curl
-g = git.bake(_cwd=repopath)
+g = git
+g = g.bake(_cwd=repopath)
 c = curl
 
 # req
