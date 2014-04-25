@@ -26,6 +26,31 @@ req = requests.get('http://weburbanist.com')
 # encoding is different
 # req = c.call('http://weburbanist.com')
 
+# targets
+
+# http://en.wikipedia.org/w/api.php
+# action=query
+# prop=revisions
+# format=json
+# rvprop=timestamp|content
+# Parameters:
+#   rvprop              - Which properties to get for each revision:
+#                          ids            - The ID of the revision
+#                          flags          - Revision flags (minor)
+#                          timestamp      - The timestamp of the revision
+#                          user           - User that made the revision
+#                          userid         - User id of revision creator
+#                          size           - Length (bytes) of the revision
+#                          sha1           - SHA-1 (base 16) of the revision
+#                          contentmodel   - Content model id
+#                          comment        - Comment by the user for revision
+#                          parsedcomment  - Parsed comment by the user for the revision
+#                          content        - Text of the revision
+#                          tags           - Tags for the revision
+# rvlimit=10
+# titles=Pull
+
+
 # write to git
 
 ## write to git
@@ -42,7 +67,7 @@ out.close()
   # todo: functional to receive api hit
   # todo: test '--allow-empty'
 
-# g.commit('-a','-m','auto')
+g.commit('-a','-m','auto')
 
 ## loop by cron or trigger
 
