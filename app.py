@@ -58,7 +58,7 @@ req = requests.get('http://weburbanist.com')
 
 ## write to file
 out = open(d+f,'w',encoding='utf-8')
-out.write(req.text)
+out.write(req.text+'b')
 # out.flush()
 out.close()
 
@@ -67,7 +67,7 @@ out.close()
   # todo: functional to receive api hit
   # todo: test '--allow-empty'
 
-g.commit('-a','-m','auto')
+g.commit('-a','--allow-empty','-m','auto')
 
 ## loop by cron or trigger
 
