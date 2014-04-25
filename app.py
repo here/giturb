@@ -1,5 +1,7 @@
+#!/home/known/a/code/py/pyreqgit/env3.3/bin/python
 
-# Fix relative import fails for imported libraries
+import sys
+sys.path.insert(0,'/home/known/a/code/py/pyreqgit/env3.3/lib/python3.3/site-packages');
 
 # http://docs.python-requests.org/en/latest/user/quickstart/#make-a-request
 # fails when run from cron due to py2.7 on sys and this py3.3 in venv
@@ -36,15 +38,17 @@ out.write(req.text)
 out.close()
 
 ## commit
-	# todo: check repo status
+	# todo: check repo status for new files etc
   # todo: functional to receive api hit
+  # todo: test '--allow-empty'
 
 # g.commit('-a','-m','auto')
 
 ## loop by cron or trigger
 
-##### end 
+##### end active code
 
+## Notes
 
 # https://docs.python.org/2/install/index.html#modifying-python-s-search-path
 # fix import module path error for pyvenv-3.3 from cron 
